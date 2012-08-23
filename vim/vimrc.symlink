@@ -1,0 +1,62 @@
+" First things first, fire up pathogen
+call pathogen#infect()
+
+syntax on
+" highlight CursorLine term=underline cterm=underline ctermfg=none ctermbg=none
+highlight Comment ctermfg=darkcyan
+
+" searching
+set ignorecase
+set incsearch
+" set hlsearch
+
+" editing
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+if has("autocmd")
+  filetype plugin indent on
+endif
+" save files when switching buffers
+" set autowrite
+
+" UI
+set cursorline
+set ruler
+set showcmd
+set showmode
+" set number
+" Set tab-completion to be more bash-like
+set wildmode=longest,list,full
+" Could also use set wildmenu, but it is unclear if I want that yet
+
+" Set the statusline to the standard from 'ruler' along with the fugitive
+" status
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+set visualbell
+
+" MacVim UI
+
+if has("gui_macvim")
+  colorscheme solarized
+
+  " disable macvim's fancy cmd and option movements, making vim more pure
+  let macvim_skip_cmd_opt_movement = 1
+  " Do not show the toolbar
+  set guioptions-=T
+  set background=dark
+
+  " Change the pwd to the directory of the file
+  set autochdir
+
+  " show a vertical line at column XX
+  if exists('+colorcolumn')
+    set colorcolumn=128
+    " Make the vertical bar a nice dark grey
+    " highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
+  endif
+endif
+
+" vi: ts=2 sw=2
