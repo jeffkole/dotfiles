@@ -3,7 +3,7 @@ if [ -e $git_prompt ]; then
     echo "Sourcing prompt: $git_prompt"
     source $git_prompt
     export GIT_PS1_SHOWDIRTYSTATE=true
-    export GIT_PS1_SHOWSTASHSTATE=true
-    export GIT_PS1_SHOWUNTRACKEDFILES=true
+    export GIT_PS1_SHOWSTASHSTATE=
+    export GIT_PS1_SHOWUNTRACKEDFILES=
     export GIT_PS1_SHOWUPSTREAM="auto"
 fi
