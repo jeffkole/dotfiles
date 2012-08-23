@@ -1,0 +1,29 @@
+export DOTFILES=$HOME/.dotfiles
+
+# Source every .bash file, unless the directory is marked as disabled
+FILES="${DOTFILES}/**/*.bash"
+for config_file in $FILES; do
+    if [ -e $(dirname $config_file)/DISABLED ]; then
+        echo "Skipping $config_file"
+    else
+        echo "Sourcing $config_file"
+        source $config_file
+    fi
+done
+
+# Load local stuff that you do not want in your public repository
+if [ -e ~/.localrc ]; then
+    echo "Sourcing .localrc"
+    source ~/.localrc
+fi
+
+# Source every completion.bash file, unless the directory is marked as disabled
+FILES="${DOTFILES}/**/completion.bash"
+for config_file in $FILES; do
+    if [ -e $(dirname $config_file)/DISABLED ]; then
+        echo "Skipping $config_file"
+    else
+        echo "Sourcing $config_file"
+        source $config_file
+    fi
+done

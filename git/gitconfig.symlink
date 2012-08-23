@@ -1,0 +1,16 @@
+[user]
+	email = jeff@kolesky.com
+	name = Jeff Kolesky
+[rerere]
+	enabled = 1
+[alias]
+	lol = log --oneline --graph --decorate
+	st = status
+[color]
+	ui = true
+[pager]
+	stash = cat
+[merge]
+	stat = true
+[core]
+	excludesfile = ~/.gitignore
