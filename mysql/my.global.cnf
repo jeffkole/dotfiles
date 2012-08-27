@@ -1,3 +1,5 @@
+# Point /etc/my.cnf to this file
+
 [mysqld]
 character_set_server=utf8
 default-storage-engine=InnoDB
