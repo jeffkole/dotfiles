@@ -8,5 +8,5 @@ if [ `which lesspipe.sh` ]; then
     export LESSOPEN="|lesspipe.sh %s"
 fi
 
-export GREP_OPTIONS=--color
+export GREP_OPTIONS="--color=always"
 export LSCOLORS=gxfxcxdxbxegedabagacad
