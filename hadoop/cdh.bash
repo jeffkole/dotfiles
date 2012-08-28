@@ -32,4 +32,12 @@ function cdh4() {
     __add_hadoop_to_path
 }
 
+function tail-hbase() {
+    tail -f $HBASE_HOME/logs/*.log
+}
+
+function tail-hadoop() {
+    tail -f $HADOOP_HOME/logs/*.log
+}
+
 cdh3
