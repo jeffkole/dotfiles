@@ -8,5 +8,7 @@ if [ `which lesspipe.sh` ]; then
     export LESSOPEN="|lesspipe.sh %s"
 fi
 
-export GREP_OPTIONS="--color=always"
+# --color=always is awesome for less, but is bad for things like
+# vi `find . -name "*.java" | grep Type | head -1`
+export GREP_OPTIONS="--color=auto"
 export LSCOLORS=gxfxcxdxbxegedabagacad
