@@ -6,20 +6,11 @@ cdh3_hbase_home=$hadoop_root/hbase-0.90.6-cdh3u4
 cdh4_hbase_home=$hadoop_root/hbase-0.92.1-cdh4.0.1
 cdh4_wibi_home=/opt/wibi-2.0.0
 
-function remove_path_entry() {
-    path=$1
-    # replace / in a path with \/
-    regex=${2//\//\\/}
-
-    echo $path | sed "s/[^:]*$regex[^:]*/::/g" | sed 's/::*/:/g'
-    return 0
-}
-
 function __add_hadoop_to_path() {
     path=$PATH
     # Remove all references to hadoop in the PATH
-    path=$(remove_path_entry "$path" "$hadoop_root")
-    path=$(remove_path_entry "$path" "/opt/wibi")
+    path=$(__remove_path_entry "$path" "$hadoop_root")
+    path=$(__remove_path_entry "$path" "/opt/wibi")
     export PATH=$path:$HADOOP_HOME/bin:$HBASE_HOME/bin:$WIBI_HOME/bin
 }
 

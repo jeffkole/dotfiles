@@ -1,4 +1,9 @@
+#!/bin/bash
+
 export DOTFILES=$HOME/.dotfiles
+
+# Include functions other scripts use
+source $DOTFILES/functions.bash
 
 # Source every .bash file, unless the directory is marked as disabled
 FILES="${DOTFILES}/**/*.bash"
