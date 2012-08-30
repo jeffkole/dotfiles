@@ -5,6 +5,12 @@ function __safe_git_prompt() {
     fi
 }
 
+function __safe_rbenv_prompt() {
+    if [ `type -t __rbenv_ps1` ]; then
+        __rbenv_ps1
+    fi
+}
+
 function __cdh_version_prompt() {
    if [ -n "$CDH" ]; then
        echo -e "|$CDH|"
@@ -54,4 +60,4 @@ background_white=$'\e[47m'
 normal=$'\e[00m'
 reset_color=$'\e[39m'
 
-PS1='\[${green}\]$(__safe_git_prompt "|%s|")\[${cyan}\]$(__cdh_version_prompt)\[${reset_color}\] on \[${orange}\]\h \[${reset_color}\]in \[${green}\]\w \[${reset_color}\]\[\n\[${green}\]→\[${reset_color}\] '
+PS1='\[${green}\]$(__safe_git_prompt "|%s|")\[${purple}\]$(__safe_rbenv_prompt)\[${cyan}\]$(__cdh_version_prompt)\[${reset_color}\] on \[${orange}\]\h \[${reset_color}\]in \[${green}\]\w \[${reset_color}\]\[\n\[${green}\]→\[${reset_color}\] '
