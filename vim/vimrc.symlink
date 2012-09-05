@@ -18,6 +18,13 @@ set autoindent
 if has("autocmd")
   filetype plugin indent on
 endif
+
+" formatting
+set textwidth=80
+set formatoptions-=t " turn off automatic wrapping with textwidth or wrapmargin
+set formatoptions-=o " turn off comment leader insertion on 'o' or 'O'
+set formatoptions+=1 " do not break after a one-letter word
+
 " save files when switching buffers
 " set autowrite
 
