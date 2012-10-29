@@ -43,4 +43,4 @@ function tail-hadoop() {
     tail -f $HADOOP_HOME/logs/*.log
 }
 
-cdh3
+cdh4
