@@ -6,3 +6,4 @@ if [ -e $todo_completion ]; then
     # Since I alias todo.sh to `t`, map the completion function to it as well
     complete -F _todo t
 fi
+unset todo_completion

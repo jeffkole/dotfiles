@@ -3,3 +3,4 @@ if [ -e $scala_completion ]; then
     echo "Sourcing completion: $scala_completion"
     source $scala_completion
 fi
+unset scala_completion

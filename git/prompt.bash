@@ -7,3 +7,4 @@ if [ -e $git_prompt ]; then
     export GIT_PS1_SHOWUNTRACKEDFILES=
     export GIT_PS1_SHOWUPSTREAM="auto"
 fi
+unset git_prompt
