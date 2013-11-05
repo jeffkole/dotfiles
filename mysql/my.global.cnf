@@ -3,6 +3,9 @@
 [mysqld]
 character_set_server=utf8
 default-storage-engine=InnoDB
+
+log_bin=binlog
+binlog_format=ROW
 expire_logs_days=7
 
 sql_mode=traditional
