@@ -12,9 +12,15 @@ function __safe_rbenv_prompt() {
 }
 
 function __cdh_version_prompt() {
-   if [ -n "$CDH" ]; then
-       echo -e "|$CDH|"
-   fi
+    if [ -n "$CDH" ]; then
+        echo -e "|$CDH|"
+    fi
+}
+
+function __java_version_prompt() {
+    if [ -n "$JAVA_VERS" ]; then
+        echo -e "|Java: $JAVA_VERS|"
+    fi
 }
 
 # Colors borrowed from bash-it
@@ -60,4 +66,4 @@ background_white=$'\e[47m'
 normal=$'\e[00m'
 reset_color=$'\e[39m'
 
-PS1='\[${green}\]$(__safe_git_prompt "|%s|")\[${purple}\]$(__safe_rbenv_prompt)\[${cyan}\]$(__cdh_version_prompt)\[${reset_color}\] on \[${orange}\]\h \[${reset_color}\]in \[${green}\]\w \[${reset_color}\]\[\n\[${green}\]→\[${reset_color}\] '
+PS1='\[${green}\]$(__safe_git_prompt "|%s|")\[${purple}\]$(__safe_rbenv_prompt)\[${cyan}\]$(__cdh_version_prompt)\[${reset_color}\]\[${purple}\]$(__java_version_prompt)\[${reset_color}\] on \[${orange}\]\h \[${reset_color}\]in \[${green}\]\w \[${reset_color}\]\[\n\[${green}\]→\[${reset_color}\] '
