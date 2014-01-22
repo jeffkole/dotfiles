@@ -9,4 +9,4 @@ function java7() {
     export JAVA_VERS=7
 }
 
-java7
+java6
