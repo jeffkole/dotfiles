@@ -45,6 +45,14 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 set visualbell
 
+" Some settings for Clojure & ClojureScript editing
+if has("autocmd")
+  autocmd VimEnter *.clj,*.cljs RainbowParenthesesToggle
+  autocmd Syntax *.clj,*.cljs RainbowParenthesesLoadRound
+  autocmd Syntax *.clj,*.cljs RainbowParenthesesLoadSquare
+  autocmd Syntax *.clj,*.cljs RainbowParenthesesLoadBraces
+endif
+
 " MacVim UI
 
 if has("gui_macvim")
