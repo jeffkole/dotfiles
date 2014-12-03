@@ -1,4 +1,6 @@
 " First things first, fire up pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#helptags()
 call pathogen#infect()
 
 syntax on
