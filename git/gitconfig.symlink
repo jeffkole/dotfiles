@@ -14,3 +14,5 @@
 	stat = true
 [core]
 	excludesfile = ~/.gitignore
+[push]
+	default = simple
