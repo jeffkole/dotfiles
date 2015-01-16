@@ -1,23 +1,52 @@
+set nocompatible
+
 " First things first, fire up pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#helptags()
 call pathogen#infect()
+call pathogen#helptags()
 
 syntax on
 " highlight CursorLine term=underline cterm=underline ctermfg=none ctermbg=none
 highlight Comment ctermfg=darkcyan
 
+" change the mapleader from \ to ,
+let mapleader=","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Allow buffers to be hidden instead of closed
+set hidden
+
+" Read files again if they changed on the filesystem
+set autoread
+
 " searching
 set ignorecase
+" ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smartcase
 set incsearch
-" set hlsearch
+set hlsearch
+" Clear search highlight
+nmap <silent> ,/ :nohlsearch<CR>
 
 " editing
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+" use multiple of shiftwidth when indenting with '<' and '>'
+set shiftround
 set autoindent
+" copy the previous indentation on autoindenting
+set copyindent
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+" Change the pwd to the directory of the file
+set autochdir
+" Turn off folding (I hate it)
+set nofoldenable
 if has("autocmd")
   filetype plugin indent on
 endif
@@ -36,6 +65,7 @@ set cursorline
 set ruler
 set showcmd
 set showmode
+set laststatus=2 " always put in the status line
 " set number
 " Set tab-completion to be more bash-like
 set wildmode=longest,list,full
@@ -46,6 +76,9 @@ set wildmode=longest,list,full
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 set visualbell
+
+" turn off swapfile usage
+set noswapfile
 
 " Some settings for Clojure & ClojureScript editing
 if has("autocmd")
@@ -66,9 +99,6 @@ if has("gui_macvim")
   set guioptions-=T
   set background=dark
 
-  " Change the pwd to the directory of the file
-  set autochdir
-
   " show a vertical line at column XX
   if exists('+colorcolumn')
     set colorcolumn=80
@@ -76,5 +106,13 @@ if has("gui_macvim")
     " highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
   endif
 endif
+
+" Settings for CommandT
+let g:CommandTMaxHeight=15 " take up no more than 15 lines for the menu
+let g:CommandTFileScanner="find"
+let g:CommandTMatchWindowReverse=1 " put the best match at the bottom of the list
+" Ignore files in node_modules and bower_components directories, along with
+" anything else listed in the |'wildignore'| global.
+let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*,**/bower_components/*"
 
 " vi: ts=2 sw=2
