@@ -120,4 +120,7 @@ let g:jshint2_read=1
 let g:jshint2_save=1
 let g:jshint2_confirm=0
 
+" Settings for javascript-libraries-syntax
+let g:used_javascript_libs='underscore,react,flux,handlebars,jasmine'
+
 " vi: ts=2 sw=2
