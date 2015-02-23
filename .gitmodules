@@ -34,3 +34,6 @@
 [submodule "vim/vim.symlink/bundle/editorconfig-vim"]
 	path = vim/vim.symlink/bundle/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "vim/vim.symlink/bundle/jshint2.vim"]
+	path = vim/vim.symlink/bundle/jshint2.vim
+	url = git@github.com:Shutnik/jshint2.vim.git

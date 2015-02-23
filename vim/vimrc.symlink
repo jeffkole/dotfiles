@@ -115,4 +115,9 @@ let g:CommandTMatchWindowReverse=1 " put the best match at the bottom of the lis
 " anything else listed in the |'wildignore'| global.
 let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*,**/bower_components/*"
 
+" Settings for JSHint2
+let g:jshint2_read=1
+let g:jshint2_save=1
+let g:jshint2_confirm=0
+
 " vi: ts=2 sw=2
