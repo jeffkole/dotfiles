@@ -12,3 +12,6 @@ fi
 # vi `find . -name "*.java" | grep Type | head -1`
 export GREP_OPTIONS="--color=auto"
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+# set the max files limit to something more reasonable than 256
+ulimit -n 2048
