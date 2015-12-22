@@ -80,12 +80,15 @@ set visualbell
 " turn off swapfile usage
 set noswapfile
 
-" Some settings for Clojure & ClojureScript editing
 if has("autocmd")
+  " Some settings for Clojure & ClojureScript editing
   autocmd VimEnter *.clj,*.cljs RainbowParenthesesToggle
   autocmd Syntax *.clj,*.cljs RainbowParenthesesLoadRound
   autocmd Syntax *.clj,*.cljs RainbowParenthesesLoadSquare
   autocmd Syntax *.clj,*.cljs RainbowParenthesesLoadBraces
+
+  " Turn on spell check for prose files
+  autocmd FileType gitcommit,markdown setlocal spell
 endif
 
 " MacVim UI
