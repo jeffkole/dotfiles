@@ -89,6 +89,9 @@ if has("autocmd")
 
   " Turn on spell check for prose files
   autocmd FileType gitcommit,markdown setlocal spell
+
+  " Turn on compiling on write for Elm files
+  " autocmd BufWritePost *.elm ElmMakeCurrentFile
 endif
 
 " MacVim UI
