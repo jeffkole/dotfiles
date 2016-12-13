@@ -119,7 +119,7 @@ let g:CommandTFileScanner="find"
 let g:CommandTMatchWindowReverse=1 " put the best match at the bottom of the list
 " Ignore files in node_modules and bower_components directories, along with
 " anything else listed in the |'wildignore'| global.
-let g:CommandTWildIgnore="**/node_modules/*,**/bower_components/*," . &wildignore
+let g:CommandTWildIgnore="*.class,**/node_modules/*,**/bower_components/*," . &wildignore
 
 " Settings for JSHint2
 let g:jshint2_read=1
