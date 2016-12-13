@@ -1,5 +1,5 @@
 [user]
-	email = jeff@kolesky.com
+	email = jkolesky@fitbit.com
 	name = Jeff Kolesky
 [rerere]
 	enabled = 1
@@ -19,3 +19,5 @@
 	excludesfile = ~/.gitignore
 [push]
 	default = simple
+[core]
+	autocrlf = input
