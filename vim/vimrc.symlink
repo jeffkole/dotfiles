@@ -36,6 +36,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set smarttab
 " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftround
 set autoindent
@@ -49,6 +50,8 @@ set autochdir
 set nofoldenable
 if has("autocmd")
   filetype plugin indent on
+
+  autocmd FileType java setlocal tabstop=4 shiftwidth=4 softtabstop=4
 endif
 
 " formatting
@@ -115,6 +118,8 @@ endif
 
 " Settings for CommandT
 let g:CommandTMaxHeight=15 " take up no more than 15 lines for the menu
+" Some repos at work have a lot of files in them.
+let g:CommandTMaxFiles=200000
 let g:CommandTFileScanner="find"
 let g:CommandTMatchWindowReverse=1 " put the best match at the bottom of the list
 " Ignore files in node_modules and bower_components directories, along with
