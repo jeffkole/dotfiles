@@ -21,3 +21,6 @@ if [ -e ~/.localrc ]; then
     echo "Sourcing .localrc"
     source ~/.localrc
 fi
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export JAVA_HOME=$(/usr/libexec/java_home)
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
