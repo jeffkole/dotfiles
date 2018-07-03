@@ -1,0 +1,6 @@
+
+" Use command-T to invoke CommandT, but first unmap it from creating a new tab.
+if has("gui_macvim")
+  macmenu File.New\ Tab key=<nop>
+  map <D-t> <Plug>(CommandT)
+endif
