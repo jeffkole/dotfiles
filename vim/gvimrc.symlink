@@ -1,3 +1,5 @@
+set macligatures
+set guifont=Fira\ Code:h12
 
 " Use command-T to invoke CommandT, but first unmap it from creating a new tab.
 if has("gui_macvim")
