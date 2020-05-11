@@ -21,3 +21,7 @@
 	default = simple
 [core]
 	autocrlf = input
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@github.com:fitstar"]
+	insteadOf = https://source.fitbit.com/scm/fitstar
