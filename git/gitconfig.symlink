@@ -6,6 +6,9 @@
 [alias]
 	lol = log --oneline --graph --decorate
 	st = status
+	llog = log --graph --pretty=format:'%C(yellow)%h%Creset %C(bold blue)%an%Creset -%C(bold cyan)%d%Creset %s %C(green)(%cr)%Creset' --abbrev-commit --date=relative
+	lg = log --pretty=format:'%C(yellow)%h %C(green)%ar %C(bold blue)%an%Creset\n%s' --abbrev-commit --date=relative
+	lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 10 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
 [color]
 	ui = true
 [pager]
