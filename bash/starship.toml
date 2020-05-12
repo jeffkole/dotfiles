@@ -1,0 +1,5 @@
+# https://starship.rs/config/#prompt
+
+[character]
+symbol = "->"
+use_symbol_for_status = true
