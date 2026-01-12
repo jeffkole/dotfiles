@@ -1,3 +1,5 @@
+export MYSQL_PS1="mysql (\U) [\d]> "
+
 function tailmysql() {
   logfile=$(mysql -BANe "show variables like 'general_log_file'" | cut -f2)
   logging=$(mysql -BANe "show variables like 'general_log'" | cut -f2)
