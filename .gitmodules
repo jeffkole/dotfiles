@@ -34,9 +34,6 @@
 [submodule "vim/vim.symlink/bundle/es.next.syntax.vim"]
 	path = vim/vim.symlink/bundle/es.next.syntax.vim
 	url = git@github.com:othree/es.next.syntax.vim
-[submodule "vim/vim.symlink/bundle/vim-jsx"]
-	path = vim/vim.symlink/bundle/vim-jsx
-	url = git@github.com:mxw/vim-jsx
 [submodule "vim/vim.symlink/bundle/vim-commentary"]
 	path = vim/vim.symlink/bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary
