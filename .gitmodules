@@ -22,9 +22,6 @@
 [submodule "vim/vim.symlink/bundle/jshint2.vim"]
 	path = vim/vim.symlink/bundle/jshint2.vim
 	url = git@github.com:Shutnik/jshint2.vim.git
-[submodule "vim/vim.symlink/bundle/yajs.vim"]
-	path = vim/vim.symlink/bundle/yajs.vim
-	url = git@github.com:othree/yajs.vim.git
 [submodule "vim/vim.symlink/bundle/javascript-libraries-syntax.vim"]
 	path = vim/vim.symlink/bundle/javascript-libraries-syntax.vim
 	url = git@github.com:othree/javascript-libraries-syntax.vim.git
