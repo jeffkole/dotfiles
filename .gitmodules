@@ -4,9 +4,6 @@
 [submodule "vim/vim.symlink/bundle/ack.vim"]
 	path = vim/vim.symlink/bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
-[submodule "vim/vim.symlink/bundle/tpope-vim-markdown"]
-	path = vim/vim.symlink/bundle/tpope-vim-markdown
-	url = git@github.com:tpope/vim-markdown.git
 [submodule "vim/vim.symlink/bundle/paredit.vim"]
 	path = vim/vim.symlink/bundle/paredit.vim
 	url = git@github.com:vim-scripts/paredit.vim.git
