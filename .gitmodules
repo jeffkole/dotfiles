@@ -4,21 +4,6 @@
 [submodule "vim/vim.symlink/bundle/ack.vim"]
 	path = vim/vim.symlink/bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
-[submodule "vim/vim.symlink/bundle/vim-fireplace"]
-	path = vim/vim.symlink/bundle/vim-fireplace
-	url = git@github.com:tpope/vim-fireplace.git
-[submodule "vim/vim.symlink/bundle/vim-classpath"]
-	path = vim/vim.symlink/bundle/vim-classpath
-	url = git@github.com:tpope/vim-classpath.git
-[submodule "vim/vim.symlink/bundle/vim-clojure-static"]
-	path = vim/vim.symlink/bundle/vim-clojure-static
-	url = git@github.com:guns/vim-clojure-static.git
-[submodule "vim/vim.symlink/bundle/vim-scala"]
-	path = vim/vim.symlink/bundle/vim-scala
-	url = git@github.com:derekwyatt/vim-scala.git
-[submodule "vim/vim.symlink/bundle/tpope-vim-markdown"]
-	path = vim/vim.symlink/bundle/tpope-vim-markdown
-	url = git@github.com:tpope/vim-markdown.git
 [submodule "vim/vim.symlink/bundle/paredit.vim"]
 	path = vim/vim.symlink/bundle/paredit.vim
 	url = git@github.com:vim-scripts/paredit.vim.git
@@ -28,39 +13,25 @@
 [submodule "vim/vim.symlink/bundle/vim-pathogen"]
 	path = vim/vim.symlink/bundle/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen.git
-[submodule "vim/vim.symlink/bundle/command-t"]
-	path = vim/vim.symlink/bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "vim/vim.symlink/bundle/editorconfig-vim"]
 	path = vim/vim.symlink/bundle/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
-[submodule "vim/vim.symlink/bundle/jshint2.vim"]
-	path = vim/vim.symlink/bundle/jshint2.vim
-	url = git@github.com:Shutnik/jshint2.vim.git
-[submodule "vim/vim.symlink/bundle/yajs.vim"]
-	path = vim/vim.symlink/bundle/yajs.vim
-	url = git@github.com:othree/yajs.vim.git
-[submodule "vim/vim.symlink/bundle/javascript-libraries-syntax.vim"]
-	path = vim/vim.symlink/bundle/javascript-libraries-syntax.vim
-	url = git@github.com:othree/javascript-libraries-syntax.vim.git
-[submodule "vim/vim.symlink/bundle/elm-vim"]
-	path = vim/vim.symlink/bundle/elm-vim
-	url = git@github.com:ElmCast/elm-vim.git
-[submodule "vim/vim.symlink/bundle/es.next.syntax.vim"]
-	path = vim/vim.symlink/bundle/es.next.syntax.vim
-	url = git@github.com:othree/es.next.syntax.vim
-[submodule "vim/vim.symlink/bundle/vim-jsx"]
-	path = vim/vim.symlink/bundle/vim-jsx
-	url = git@github.com:mxw/vim-jsx
 [submodule "vim/vim.symlink/bundle/vim-commentary"]
 	path = vim/vim.symlink/bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary
-[submodule "vim/vim.symlink/bundle/vim-go"]
-	path = vim/vim.symlink/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
-[submodule "vim/vim.symlink/bundle/vim-surround"]
-	path = vim/vim.symlink/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
 [submodule "vim/vim.symlink/bundle/vim-repeat"]
 	path = vim/vim.symlink/bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
+[submodule "vim/vim.symlink/pack/plugins/start/vim-polyglot"]
+	path = vim/vim.symlink/pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "vim/vim.symlink/pack/plugins/start/vim-go"]
+	path = vim/vim.symlink/pack/plugins/start/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "vim/vim.symlink/pack/plugins/start/vim-surround"]
+	path = vim/vim.symlink/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/pack/plugins/start/command-t"]
+	path = vim/vim.symlink/pack/plugins/start/command-t
+	url = https://github.com/wincent/command-t.git
+	branch = 7-x-release
